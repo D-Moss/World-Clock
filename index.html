@@ -12,34 +12,37 @@
 	<div class="container">
 		<h1>World Clock</h1>
 
-		<select>
+		<select id="city">
 			<option value="">Select a city</option>
-			<option value="">New York</option>
-			<option value="">Houston</option>
-			<option value="">Las Vegas</option>
-			<option value="">Paris</option>
-			<option value="">Tokyo</option>
-			<option value="">Florence</option>
+			<option value="America/New_York">New York</option>
+			<option value="America/Denver">Denver</option>
+			<option value="Europe/Paris">Paris</option>
+			<option value="Asia/Tokyo">Tokyo</option>
+			<option value="America/Mexico_City">Mexico</option>
 		</select>
 
-		<div class="city" id="phila">
-			<div>
-				<h2>Philadelphia</h2>
-				<div class="date"></div>
+		<div id="cities">
+			<div class="city" id="phila">
+				<div>
+					<h2>Philadelphia</h2>
+					<div class="date"></div>
+				</div>
+				<div class="time"></div>
 			</div>
-			<div class="time"></div>
-		</div>
-		<div class="city" id="hawaii">
-			<div>
-				<h2>Hawaii</h2>
-				<div class="date"></div>
+			<div class="city" id="hawaii">
+				<div>
+					<h2>Hawaii</h2>
+					<div class="date"></div>
+				</div>
+				<div class="time"></div>
 			</div>
-			<div class="time"></div>
 		</div>
 	</div>
 	
 	<footer>This project was coded by <strong> Diona Moss </strong> and is 
-		<a href="https://github.com/D-Moss/World-Clock" target="_blank">open sourced on GitHub</a>.
+		<a href="https://github.com/D-Moss/World-Clock" target="_blank">
+		 open sourced on GitHub
+		</a>.
 	</footer>
 	<script src="index.js"></script>
 </body>
