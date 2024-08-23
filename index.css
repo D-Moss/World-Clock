@@ -1,0 +1,16 @@
+body {
+	background: beige;
+}
+
+h1 {
+	text-align: center;
+}
+
+footer {
+	text-align: center;
+}
+
+footer a {
+	text-decoration: none;
+	color: red;
+}
