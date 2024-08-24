@@ -12,6 +12,10 @@ body {
 	margin: 60px auto;
 }
 
+h1 a {
+	color: red;
+}
+
 select {
 	display: block;
 	width: 100%;

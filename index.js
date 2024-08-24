@@ -1,13 +1,13 @@
 function updateTime() {
-	//Philadelphia
-	let philadelphiaElement = document.querySelector("#phila");
-	if (philadelphiaElement) {
-		let philadelphiaDateElement = philadelphiaElement.querySelector(".date");
-		let philadelphiaTimeElement = philadelphiaElement.querySelector(".time");
-		let philadelphiaTime = moment().tz("America/New_York");
+	//Denver
+	let denverElement = document.querySelector("#denver");
+	if (denverElement) {
+		let denverDateElement = denverElement.querySelector(".date");
+		let denverTimeElement = denverElement.querySelector(".time");
+		let denverTime = moment().tz("America/Denver");
 
-		philadelphiaDateElement.innerHTML = philadelphiaTime.format("dddd, MMMM D, YYYY");
-		philadelphiaTimeElement.innerHTML = philadelphiaTime.format("h:mm:ss [<small>]A[</small>]");
+		denverDateElement.innerHTML = denverTime.format("dddd, MMMM D, YYYY");
+		denverTimeElement.innerHTML = denverTime.format("h:mm:ss [<small>]A[</small>]");
 	}
 
 	//Hawaii
@@ -24,6 +24,9 @@ function updateTime() {
 
 function updateCity(event) {
 	let cityTimeZone = event.target.value;
+	if (cityTimeZone === "current") {
+		cityTimeZone = moment.tz.guess();
+	}
 	let cityName = cityTimeZone.replace("_", " ").split("/")[1];
 	let cityTime = moment().tz(cityTimeZone);
 	let citiesElement = document.querySelector("#cities");
