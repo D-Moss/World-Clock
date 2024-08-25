@@ -1,24 +1,35 @@
 function updateTime() {
-	//Denver
-	let denverElement = document.querySelector("#denver");
-	if (denverElement) {
-		let denverDateElement = denverElement.querySelector(".date");
-		let denverTimeElement = denverElement.querySelector(".time");
-		let denverTime = moment().tz("America/Denver");
+	//NewYork
+	let newYorkElement = document.querySelector("#new-york");
+	if (newYorkElement) {
+		let newYorkDateElement = newYorkElement.querySelector(".date");
+		let newYorkTimeElement = newYorkElement.querySelector(".time");
+		let newYorkTime = moment().tz("America/New_York");
 
-		denverDateElement.innerHTML = denverTime.format("dddd, MMMM D, YYYY");
-		denverTimeElement.innerHTML = denverTime.format("h:mm:ss [<small>]A[</small>]");
+		newYorkDateElement.innerHTML = newYorkTime.format("dddd, MMMM D, YYYY");
+		newYorkTimeElement.innerHTML = newYorkTime.format("h:mm:ss [<small>]A[</small>]");
+	}
+
+	//Phoenix
+	let phoenixElement = document.querySelector("#phoenix");
+	if (phoenixElement) {
+		let phoenixDateElement = phoenixElement.querySelector(".date");
+		let phoenixTimeElement = phoenixElement.querySelector(".time");
+		let phoenixTime = moment().tz("America/Phoenix");
+
+		phoenixDateElement.innerHTML = phoenixTime.format("dddd, MMMM D, YYYY");
+		phoenixTimeElement.innerHTML = phoenixTime.format("h:mm:ss [<small>]A[</small>]");
 	}
 
 	//Hawaii
-	let hawaiiElement = document.querySelector("#hawaii");
-	if (hawaiiElement) {
-		let hawaiiDateElement = hawaiiElement.querySelector(".date");
-		let hawaiiTimeElement = hawaiiElement.querySelector(".time");
-		let hawaiiTime = moment().tz("Europe/Paris");
+	let parisElement = document.querySelector("#paris");
+	if (parisElement) {
+		let parisDateElement = parisElement.querySelector(".date");
+		let parisTimeElement = parisElement.querySelector(".time");
+		let parisTime = moment().tz("Europe/Paris");
 
-		hawaiiDateElement.innerHTML = hawaiiTime.format("dddd, MMMM D, YYYY");
-		hawaiiTimeElement.innerHTML = hawaiiTime.format("h:mm:ss [<small>]A[</small>]");
+		parisDateElement.innerHTML = parisTime.format("dddd, MMMM D, YYYY");
+		parisTimeElement.innerHTML = parisTime.format("h:mm:ss [<small>]A[</small>]");
 	}
 }
 
@@ -41,6 +52,7 @@ function updateCity(event) {
 			<small>${cityTime.format("A")}</small>
 		</div>
 	</div>
+	<a href="index.html">All cities</a>
 	`;
 }
 
