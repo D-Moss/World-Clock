@@ -32,7 +32,9 @@ select {
 	display: flex;
 	justify-content: space-between;
 	margin: 37px 0;
-	color: deeppink;
+	background-color: #9FBFCF;
+	opacity: 0.5;
+	color: #000;
 	padding: 30px 0;
 	border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
 	transition: all 500ms ease-in-out;
